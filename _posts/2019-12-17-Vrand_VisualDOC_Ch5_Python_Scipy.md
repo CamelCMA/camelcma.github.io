@@ -10,7 +10,6 @@ tags:
   - Optimization
 excerpt_separator: <!--more-->
 ---
-{% include head_custom.html %}
 
 <body>
     <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h2 id="-0-目錄"><a class="anchor hidden-xs" href="#-0-目錄" title="-0-目錄"><span class="octicon octicon-link"></span></a><img alt=":bulb:" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/bulb.png" title=":bulb:"> 0. 目錄</h2><p><span class="toc"><ul>
@@ -95,7 +94,7 @@ resp = minimize(fun=prob, x0=x0, method=<span class="hljs-string">'trust-constr'
                 options={<span class="hljs-string">'verbose'</span>:<span class="hljs-number">2</span>})
 
 print(resp)
-</div></div></code></pre><p><img src="/assets/img/vrand_vdoc/ch5/901_scipy_result.JPG" alt="901_scipy_result"></p><table>
+</div></div></code></pre><p><img src="/assets/img/vrand_vdoc/ch5/901_scipy_result.jpg" alt="901_scipy_result"></p><table>
 <thead>
 <tr>
 <th style="text-align:center">()內為<code>PythonEquation</code>被呼叫次數</th>

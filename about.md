@@ -22,4 +22,5 @@ sidebar_link: true
 ## About CMA記事
 * 2019/July/15於[Gandi](https://gandi.net)註冊。
 * 2019/Dec/17開始部屬於[Github Pages](https://pages.github.com/)。
-* 2019/Dec/17發表`Vrand VisualDOC`系列文共7篇。
+    * 發佈`Vrand VisualDOC`系列文共7篇。
+    * 建議使用筆電或桌機瀏覽CMA，會有比較好的體驗。

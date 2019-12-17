@@ -9,7 +9,7 @@ article + *, .post-body ~ section {
   margin-top: $section-spacing;
 
   > h2:first-child, > h3:first-child {
-    margin-top: 10;
+    margin-top: 0;
   }
 }
 
