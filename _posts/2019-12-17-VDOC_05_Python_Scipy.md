@@ -1,28 +1,26 @@
 ---
 layout: post
-title: VisualDOC_Ch3_DOE_Opt_RSA_Using_DOE
+title: VDOC_05_Python_Scipy
 categories:
   - Cae
 tags:
   - Cae
   - Vrand
   - VisualDOC
-  - Optimization
-excerpt: "應用VisualDOC的Optimization及RSA component進行函數最小化求解。<br/>"
+  - Optization
+  - VDOC
+  - Python
+  - Scipy
+excerpt: "應用Python Scipy進行函數最小化求解。<br/>"
 ---
 
 <body>
     <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h2 id="-0-目錄"><a class="anchor hidden-xs" href="#-0-目錄" title="-0-目錄"><span class="octicon octicon-link"></span></a><img alt=":bulb:" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/bulb.png" title=":bulb:"> 0. 目錄</h2><p><span class="toc"><ul>
-<li><a href="#VisualDOC_Ch3_Opt_RSA_Using_DOE" title="VisualDOC_Ch3_Opt_RSA_Using_DOE">VisualDOC_Ch3_Opt_RSA_Using_DOE</a><ul>
+<li><a href="#VDOC_05_Python_Scipy" title="VDOC_05_Python_Scipy">VDOC_05_Python_Scipy</a><ul>
 <li><a href="#-0-目錄" title=" 0. 目錄"> 0. 目錄</a></li>
 <li><a href="#-1-老駱提醒" title=" 1. 老駱提醒"> 1. 老駱提醒</a></li>
 <li><a href="#-2-問題描述" title=" 2. 問題描述"> 2. 問題描述</a></li>
-<li><a href="#-3-VisualDOC操作細節" title=" 3. VisualDOC操作細節"> 3. VisualDOC操作細節</a><ul>
-<li><a href="#31-Optimization-Using-DOE" title="3.1 Optimization Using DOE">3.1 Optimization Using DOE</a></li>
-<li><a href="#32-Optimization-Using-DOE利用PythonEquation驗證" title="3.2 Optimization Using DOE(利用PythonEquation驗證)">3.2 Optimization Using DOE(利用PythonEquation驗證)</a></li>
-<li><a href="#33-RSA-Using-DOE" title="3.3 RSA Using DOE">3.3 RSA Using DOE</a></li>
-</ul>
-</li>
+<li><a href="#-3-Python-Scipy" title=" 3. Python Scipy"> 3. Python Scipy</a></li>
 <li><a href="#-4-聯絡老駱" title="  4. 聯絡老駱">  4. 聯絡老駱</a></li>
 </ul>
 </li>
@@ -31,8 +29,8 @@ excerpt: "應用VisualDOC的Optimization及RSA component進行函數最小化求
 
 <h2 id="-1-老駱提醒"><a class="anchor hidden-xs" href="#-1-老駱提醒" title="-1-老駱提醒"><span class="octicon octicon-link"></span></a><img alt=":mega:" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/mega.png" title=":mega:"> 1. 老駱提醒</h2><div class="alert alert-info">
 <ul>
-<li>請先確認，您已經閱讀 <ins><a href="{% post_url 2019-12-17-VisualDOC_Ch0_Introduction %}" target="_blank" rel="noopener">VisualDOC_Ch0_Introduction</a></ins> 中的聲明。</li>
-<li>本文延續 <ins><a href="{% post_url 2019-12-17-VisualDOC_Ch2_DOE %}" target="_blank" rel="noopener">VR&amp;D_VisualDOC_Ch2_DOE</a></ins> 繼續介紹如何使用<code>VisualDOC</code>結合<code>DOE</code>與<code>Optimization</code>或<code>RSA</code>求解問題。</li>
+<li>請先確認，您已經閱讀 <ins><a href="{% post_url 2019-12-17-VDOC_00_Introduction %}" target="_blank" rel="noopener">VDOC_00_Introduction</a></ins> 中的聲明。</li>
+<li>本文補充說明如何利用<code>Python</code> <code>Scipy</code>進行函數最小化求解。</li>
 </ul>
 </div><h2 id="-2-問題描述"><a class="anchor hidden-xs" href="#-2-問題描述" title="-2-問題描述"><span class="octicon octicon-link"></span></a><img alt=":question:" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/question.png" title=":question:"> 2. 問題描述</h2><p><code>Minimize Objective Function</code> <span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-1-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>f</mi><mo stretchy=&quot;false&quot;>(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy=&quot;false&quot;>)</mo></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-1" style="width: 3.343em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.858em; height: 0px; font-size: 116%;"><span style="position: absolute; clip: rect(1.457em, 1002.75em, 2.804em, -999.997em); top: -2.368em; left: 0em;"><span class="mrow" id="MathJax-Span-2"><span class="mi" id="MathJax-Span-3" style="font-family: MathJax_Math-italic;">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.057em;"></span></span><span class="mo" id="MathJax-Span-4" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-5" style="font-family: MathJax_Math-italic;">x</span><span class="mo" id="MathJax-Span-6" style="font-family: MathJax_Main;">,</span><span class="mi" id="MathJax-Span-7" style="font-family: MathJax_Math-italic; padding-left: 0.164em;">y<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-8" style="font-family: MathJax_Main;">)</span></span><span style="display: inline-block; width: 0px; height: 2.373em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.372em; border-left: 0px solid; width: 0px; height: 1.316em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></math></span></span><script type="math/tex" id="MathJax-Element-1">f(x,y)</script></span>:<br>
 <span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><div class="MathJax_Display" style="text-align: center;"><span class="MathJax" id="MathJax-Element-2-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;><mi>f</mi><mo stretchy=&quot;false&quot;>(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy=&quot;false&quot;>)</mo><mo>=</mo><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mfrac><mrow><mo stretchy=&quot;false&quot;>(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo stretchy=&quot;false&quot;>)</mo></mrow><mn>10</mn></mfrac></mrow><mo>&amp;#x2212;</mo><mi>cos</mi><mo>&amp;#x2061;</mo><mo stretchy=&quot;false&quot;>(</mo><mi>x</mi><mo stretchy=&quot;false&quot;>)</mo><mi>cos</mi><mo>&amp;#x2061;</mo><mo stretchy=&quot;false&quot;>(</mo><mi>y</mi><mo stretchy=&quot;false&quot;>)</mo></math>" role="presentation" style="text-align: center; position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-9" style="width: 17.567em; display: inline-block;"><span style="display: inline-block; position: relative; width: 15.143em; height: 0px; font-size: 116%;"><span style="position: absolute; clip: rect(0.649em, 1015.03em, 3.235em, -999.997em); top: -2.368em; left: 0em;"><span class="mrow" id="MathJax-Span-10"><span class="mi" id="MathJax-Span-11" style="font-family: MathJax_Math-italic;">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.057em;"></span></span><span class="mo" id="MathJax-Span-12" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-13" style="font-family: MathJax_Math-italic;">x</span><span class="mo" id="MathJax-Span-14" style="font-family: MathJax_Main;">,</span><span class="mi" id="MathJax-Span-15" style="font-family: MathJax_Math-italic; padding-left: 0.164em;">y<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-16" style="font-family: MathJax_Main;">)</span><span class="mo" id="MathJax-Span-17" style="font-family: MathJax_Main; padding-left: 0.272em;">=</span><span class="texatom" id="MathJax-Span-18" style="padding-left: 0.272em;"><span class="mrow" id="MathJax-Span-19"><span class="mfrac" id="MathJax-Span-20"><span style="display: inline-block; position: relative; width: 4.098em; height: 0px; margin-right: 0.11em; margin-left: 0.11em;"><span style="position: absolute; clip: rect(3.02em, 1003.88em, 4.421em, -999.997em); top: -4.685em; left: 50%; margin-left: -1.991em;"><span class="mrow" id="MathJax-Span-21"><span class="mo" id="MathJax-Span-22" style="font-family: MathJax_Main;">(</span><span class="msubsup" id="MathJax-Span-23"><span style="display: inline-block; position: relative; width: 1.026em; height: 0px;"><span style="position: absolute; clip: rect(3.397em, 1000.54em, 4.151em, -999.997em); top: -3.984em; left: 0em;"><span class="mi" id="MathJax-Span-24" style="font-family: MathJax_Math-italic;">x</span><span style="display: inline-block; width: 0px; height: 3.99em;"></span></span><span style="position: absolute; top: -4.362em; left: 0.595em;"><span class="mn" id="MathJax-Span-25" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 3.99em;"></span></span></span></span><span class="mo" id="MathJax-Span-26" style="font-family: MathJax_Main; padding-left: 0.218em;">+</span><span class="msubsup" id="MathJax-Span-27" style="padding-left: 0.218em;"><span style="display: inline-block; position: relative; width: 0.973em; height: 0px;"><span style="position: absolute; clip: rect(3.397em, 1000.49em, 4.367em, -999.997em); top: -3.984em; left: 0em;"><span class="mi" id="MathJax-Span-28" style="font-family: MathJax_Math-italic;">y<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span style="display: inline-block; width: 0px; height: 3.99em;"></span></span><span style="position: absolute; top: -4.362em; left: 0.541em;"><span class="mn" id="MathJax-Span-29" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 3.99em;"></span></span></span></span><span class="mo" id="MathJax-Span-30" style="font-family: MathJax_Main;">)</span></span><span style="display: inline-block; width: 0px; height: 3.99em;"></span></span><span style="position: absolute; clip: rect(3.182em, 1000.97em, 4.151em, -999.997em); top: -3.284em; left: 50%; margin-left: -0.482em;"><span class="mn" id="MathJax-Span-31" style="font-family: MathJax_Main;">10</span><span style="display: inline-block; width: 0px; height: 3.99em;"></span></span><span style="position: absolute; clip: rect(0.865em, 1004.1em, 1.242em, -999.997em); top: -1.29em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 4.098em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.08em;"></span></span></span></span></span></span><span class="mo" id="MathJax-Span-32" style="font-family: MathJax_Main; padding-left: 0.218em;">−</span><span class="mi" id="MathJax-Span-33" style="font-family: MathJax_Main; padding-left: 0.218em;">cos</span><span class="mo" id="MathJax-Span-34"></span><span class="mo" id="MathJax-Span-35" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-36" style="font-family: MathJax_Math-italic;">x</span><span class="mo" id="MathJax-Span-37" style="font-family: MathJax_Main;">)</span><span class="mi" id="MathJax-Span-38" style="font-family: MathJax_Main; padding-left: 0.164em;">cos</span><span class="mo" id="MathJax-Span-39"></span><span class="mo" id="MathJax-Span-40" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-41" style="font-family: MathJax_Math-italic;">y<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-42" style="font-family: MathJax_Main;">)</span></span><span style="display: inline-block; width: 0px; height: 2.373em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.872em; border-left: 0px solid; width: 0px; height: 2.753em;"></span></span></nobr><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mrow class="MJX-TeXAtom-ORD"><mfrac><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><mn>10</mn></mfrac></mrow><mo>−</mo><mi>cos</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mi>cos</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></math></span></span></div><script type="math/tex; mode=display" id="MathJax-Element-2">
@@ -48,75 +46,56 @@ g(x,y) = (x^2 + y^2) \ge 1.5
 <span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><div class="MathJax_Display"><span class="MathJax MathJax_FullWidth" id="MathJax-Element-6-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;><mi>x</mi><mo>=</mo><mn>2</mn><mspace linebreak=&quot;newline&quot; /><mi>y</mi><mo>=</mo><mn>2</mn></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-86" style="width: 100%; display: inline-block; min-width: 2.751em;"><span style="display: inline-block; position: relative; width: 100%; height: 0px; font-size: 116%;"><span style="position: absolute; clip: rect(3.182em, 1002.32em, 5.552em, -999.997em); top: -3.984em; left: 0em; width: 100%;"><span class="mrow" id="MathJax-Span-87"><span style="display: inline-block; position: relative; width: 100%; height: 0px;"><span style="position: absolute; clip: rect(3.182em, 1002.32em, 4.151em, -999.997em); top: -3.984em; left: 50%; margin-left: -1.183em;"><span class="mi" id="MathJax-Span-88" style="font-family: MathJax_Math-italic;">x</span><span class="mo" id="MathJax-Span-89" style="font-family: MathJax_Main; padding-left: 0.272em;">=</span><span class="mn" id="MathJax-Span-90" style="font-family: MathJax_Main; padding-left: 0.272em;">2</span><span style="display: inline-block; width: 0px; height: 3.99em;"></span></span><span style="position: absolute; clip: rect(3.182em, 1002.27em, 4.367em, -999.997em); top: -2.799em; left: 50%; margin-left: -1.183em;"><span class="mspace" id="MathJax-Span-91" style="height: 0em; vertical-align: 0em; width: 0em; display: inline-block; overflow: hidden;"></span><span class="mi" id="MathJax-Span-92" style="font-family: MathJax_Math-italic;">y<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-93" style="font-family: MathJax_Main; padding-left: 0.272em;">=</span><span class="mn" id="MathJax-Span-94" style="font-family: MathJax_Main; padding-left: 0.272em;">2</span><span style="display: inline-block; width: 0px; height: 3.99em;"></span></span></span></span><span style="display: inline-block; width: 0px; height: 3.99em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -1.684em; border-left: 0px solid; width: 0px; height: 2.503em;"></span></span></nobr><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>x</mi><mo>=</mo><mn>2</mn><mspace linebreak="newline"></mspace><mi>y</mi><mo>=</mo><mn>2</mn></math></span></span></div><script type="math/tex; mode=display" id="MathJax-Element-6">
 x=2\\
 y=2
-</script></span></p><h2 id="-3-VisualDOC操作細節"><a class="anchor hidden-xs" href="#-3-VisualDOC操作細節" title="-3-VisualDOC操作細節"><span class="octicon octicon-link"></span></a><img alt=":mag_right:" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/mag_right.png" title=":mag_right:"> 3. VisualDOC操作細節</h2><h3 id="31-Optimization-Using-DOE"><a class="anchor hidden-xs" href="#31-Optimization-Using-DOE" title="31-Optimization-Using-DOE"><span class="octicon octicon-link"></span></a>3.1 Optimization Using DOE</h3><p>本節講述如何將<code>DOE</code>設定為<code>Component Ediror內層</code>，並新增<code>Optimization</code>為<code>Component Ediror外層</code>。</p><h4 id="311-Work-Flow"><a class="anchor hidden-xs" href="#311-Work-Flow" title="311-Work-Flow"><span class="octicon octicon-link"></span></a>3.1.1 Work Flow</h4><p>打開<code>DOE with approximations</code>，另存一個新的<code>task</code>，命名為<code>Opt Using DOE</code>。接著至<code>E欄</code>中將<code>Add optimization component</code>拖曳至<code>F欄</code>。</p><p><img src="/assets/img/vrand_vdoc/ch3/101_work_flow.jpg" alt="101_work_flow"></p><p>將<code>DOE</code> <code>component</code>剪下貼上至<code>Optimization</code>中。</p><p><img src="/assets/img/vrand_vdoc/ch3/102_work_flow.jpg" alt="102_work_flow"></p><p>重新連接所有<code>component</code>。</p><p><img src="/assets/img/vrand_vdoc/ch3/103_work_flow.jpg" alt="103_work_flow"></p><h4 id="312-Data-Linker"><a class="anchor hidden-xs" href="#312-Data-Linker" title="312-Data-Linker"><span class="octicon octicon-link"></span></a>3.1.2 Data Linker</h4><p>點選<code>C欄</code> <code>Data Linker</code>，使用左側的<code>Automatically add data to the selected model</code>自動連接。</p><p><img src="/assets/img/vrand_vdoc/ch3/301_data_linker.jpg" alt="301_data_linker"></p><h4 id="313-Component-Editor"><a class="anchor hidden-xs" href="#313-Component-Editor" title="313-Component-Editor"><span class="octicon octicon-link"></span></a>3.1.3 Component Editor</h4><p>點選<code>C欄</code> <code>Component Editor</code>外層的<code>Optimization</code> <code>component</code>，並進行下列操作:</p><ul>
-<li>設定<code>x</code>及<code>y</code>的<code>Lower Bound</code>及<code>Upper Bound</code>。</li>
-<li>勾選<code>f</code>為<code>Objective</code>、不勾選其為<code>Constraint</code>，並確定其<code>Goal</code>維持預設的<code>Minimize</code>。</li>
-<li>勾選<code>g</code>為<code>Constraint</code>，並設定其<code>Lower Bound</code>為<code>1.5</code>。</li>
-</ul><p><img src="/assets/img/vrand_vdoc/ch3/201_component_editor.jpg" alt="201_component_editor"></p><p>點選<code>C欄</code> <code>Component Editor</code>中層的<code>DOE</code> <code>component</code>，選擇<code>User Defined</code>，使用<code>Import From File</code>讀入 <ins><a href="{% post_url 2019-12-17-VisualDOC_Ch2_DOE %}" target="_blank" rel="noopener">VisualDOC_Ch2_DOE</a></ins> 中產生的<code>DOE_with_responses.txt</code>，作為<code>DOE</code>點位，而不重新計算。此外，因為之前曾經另存一個<code>DOE with responses</code>的<code>task</code>，所以也可以選擇使用<code>Import From Database</code>來讀入預先計算好的點位。</p><p>在這個問題裡，因為選點策略及數量已經固定，所以其<code>f</code>及<code>g</code>的近似函數並不會改變，所以可以在<code>Show Advanced Options</code>裡勾選<code>Reuse approximation from first invocation when run as subflow</code>。如此一來，可以僅進行一次<code>f</code>及<code>g</code>近似函數的求解，之後每次在呼叫<code>Optimization</code> <code>component</code>進行最佳化的時候，都可以用第一次<code>f</code>及<code>g</code>的近似函數來代替。</p><p><img src="/assets/img/vrand_vdoc/ch3/202_component_editor.jpg" alt="202_component_editor"></p><h4 id="314-Simulation-Monitors"><a class="anchor hidden-xs" href="#314-Simulation-Monitors" title="314-Simulation-Monitors"><span class="octicon octicon-link"></span></a>3.1.4 Simulation Monitors</h4><p>點選<code>C欄</code> <code>Simulation Monitors</code>，刪除於<code>DOE</code>中所建立的圖表，新增兩張<code>Optimization</code>最常用的<code>BestObjetive</code>及<code>WrostConstraint</code>來輔助觀察。</p><p><img src="/assets/img/vrand_vdoc/ch3/401_simulation_monitors.jpg" alt="401_simulation_monitors"></p><h4 id="315-Post-processing"><a class="anchor hidden-xs" href="#315-Post-processing" title="315-Post-processing"><span class="octicon octicon-link"></span></a>3.1.5 Post processing</h4><p><img src="/assets/img/vrand_vdoc/ch3/501_post_processing.jpg" alt="501_post_processing"></p><p><img src="/assets/img/vrand_vdoc/ch3/502_post_processing.jpg" alt="502_post_processing"></p><table>
-<thead>
-<tr>
-<th style="text-align:center">()內為<code>PythonEquation</code>被呼叫次數</th>
-<th style="text-align:center"><code>x</code></th>
-<th style="text-align:center"><code>y</code></th>
-<th style="text-align:center"><code>f</code></th>
-<th style="text-align:center"><code>g</code></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>Opt Using PythonEquation(48)</code></td>
-<td style="text-align:center">0.86087</td>
-<td style="text-align:center">0.87115</td>
-<td style="text-align:center">-0.26971</td>
-<td style="text-align:center">1.50000</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>Opt Using DOE(9)</code></td>
-<td style="text-align:center">2.00000</td>
-<td style="text-align:center">0.29777</td>
-<td style="text-align:center">-0.07096</td>
-<td style="text-align:center">4.08891</td>
-</tr>
-</tbody>
-</table><h3 id="32-Optimization-Using-DOE利用PythonEquation驗證"><a class="anchor hidden-xs" href="#32-Optimization-Using-DOE利用PythonEquation驗證" title="32-Optimization-Using-DOE利用PythonEquation驗證"><span class="octicon octicon-link"></span></a>3.2 Optimization Using DOE(利用PythonEquation驗證)</h3><p>本節試著驗證看看，如果直接利用<code>PythonEquation</code> <code>component</code>輸入近似的<code>f</code>及<code>g</code>，並對其直接進行最佳化，其結果會不會和 <ins><a href="#31-Optimization-Using-DOE">3.1 Optimization Using DOE</a></ins> 一樣。</p><p>打開<code>Opt Using PythonEquation</code>這個<code>task</code>，另存一<code>task</code>，命名為<code>Opt Using DOE(Verified by PythonEquation)</code>，將<code>f</code>及<code>g</code>的近似函數，取代原有的方程式。</p><p><img src="/assets/img/vrand_vdoc/ch3/503_post_processing.jpg" alt="503_post_processing"></p><p><img src="/assets/img/vrand_vdoc/ch3/504_post_processing.jpg" alt="504_post_processing"></p><table>
-<thead>
-<tr>
-<th style="text-align:center">()內為<code>PythonEquation</code>被呼叫次數</th>
-<th style="text-align:center"><code>x</code></th>
-<th style="text-align:center"><code>y</code></th>
-<th style="text-align:center"><code>f</code></th>
-<th style="text-align:center"><code>g</code></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>Opt Using PythonEquation(48)</code></td>
-<td style="text-align:center">0.86087</td>
-<td style="text-align:center">0.87115</td>
-<td style="text-align:center">-0.26971</td>
-<td style="text-align:center">1.50000</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>Opt Using DOE(9)</code></td>
-<td style="text-align:center">2.00000</td>
-<td style="text-align:center">0.29777</td>
-<td style="text-align:center">-0.07096</td>
-<td style="text-align:center">4.08891</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>Opt Using DOE(Verified by PythonEquation)(40)</code></td>
-<td style="text-align:center">2.00000</td>
-<td style="text-align:center">0.29777</td>
-<td style="text-align:center">-0.07096</td>
-<td style="text-align:center">4.08891</td>
-</tr>
-</tbody>
-</table><p>以上，可證明<code>3.1</code>節與<code>3.2</code>節操作，可得到相同的答案。</p><h3 id="33-RSA-Using-DOE"><a class="anchor hidden-xs" href="#33-RSA-Using-DOE" title="33-RSA-Using-DOE"><span class="octicon octicon-link"></span></a>3.3 RSA Using DOE</h3><p>本節講述如何將<code>RSA</code>為<code>Component Ediror外層</code>， <code>PythonEquation</code>為<code>Component Ediror內層</code>。</p><h4 id="331-Work-Flow"><a class="anchor hidden-xs" href="#331-Work-Flow" title="331-Work-Flow"><span class="octicon octicon-link"></span></a>3.3.1 Work Flow</h4><p>打開<code>Opt Using PythonEquation</code>這個<code>task</code>，另存一個新的<code>task</code>，命名為<code>RSA Using DOE</code>。接著至<code>E欄</code>中將<code>Add Response Surface Approximated optimization component</code>拖曳至<code>F欄</code>。</p><p><img src="/assets/img/vrand_vdoc/ch3/104_work_flow.jpg" alt="104_work_flow"></p><p>將<code>PythonEquation</code> <code>component</code>剪下貼上至<code>RSA</code>中，並刪除<code>DOE</code> <code>component</code>。</p><p><img src="/assets/img/vrand_vdoc/ch3/105_work_flow.jpg" alt="105_work_flow"></p><p>重新連接所有<code>component</code>。</p><p><img src="/assets/img/vrand_vdoc/ch3/106_work_flow.jpg" alt="106_work_flow"></p><h4 id="332-Data-Linker"><a class="anchor hidden-xs" href="#332-Data-Linker" title="332-Data-Linker"><span class="octicon octicon-link"></span></a>3.3.2 Data Linker</h4><p>點選<code>C欄</code> <code>Data Linker</code>，使用左側的<code>Automatically add data to the selected model</code>自動連接。</p><p><img src="/assets/img/vrand_vdoc/ch3/302_data_linker.jpg" alt="302_data_linker"></p><h4 id="333-Component-Editor"><a class="anchor hidden-xs" href="#333-Component-Editor" title="333-Component-Editor"><span class="octicon octicon-link"></span></a>3.3.3 Component Editor</h4><p>點選<code>C欄</code> <code>Component Editor</code>外層的<code>RSA</code> <code>component</code>，並進行下列操作:</p><ul>
-<li>設定<code>x</code>的<code>Lower Bound</code>為<code>-2</code>及<code>Upper Bound</code>為<code>2</code></li>
-<li>設定<code>y</code>的<code>Lower Bound</code>為<code>-2</code>及<code>Upper Bound</code>為<code>4</code>。</li>
-<li>勾選<code>f</code>為<code>Objective</code>、不勾選其為<code>Constraint</code>，並確定其<code>Goal</code>維持預設的<code>Minimize</code>。</li>
-<li>勾選<code>g</code>為<code>Constraint</code>，並設定其<code>Lower Bound</code>為<code>1.5</code>。</li>
-</ul><p><img src="/assets/img/vrand_vdoc/ch3/203_component_editor.jpg" alt="203_component_editor"></p><p>點選<code>C欄</code> <code>Component Editor</code>外層的<code>RSA</code> <code>component</code>，選擇<code>User Defined</code>為<code>Starting Strategy</code>，使用<code>Import From File</code>讀入 <ins><a href="{% post_url 2019-12-17-VisualDOC_Ch2_DOE %}" target="_blank" rel="noopener">VisualDOC_Ch2_DOE</a></ins> 中產生的<code>DOE_with_responses.txt</code>，作為<code>DOE</code>點位，而不重新計算。當然，如 <ins><a href="#31-Optimization-Using-DOE">3.1 Optimization Using DOE</a></ins> 一樣，可以使用<code>Import From Database</code>來讀入預先計算好的點位。<code>Model Order</code>維持預設的<code>Full Quadratic</code>。</p><h4 id="334-Simulation-Monitors"><a class="anchor hidden-xs" href="#334-Simulation-Monitors" title="334-Simulation-Monitors"><span class="octicon octicon-link"></span></a>3.3.4 Simulation Monitors</h4><p>點選<code>C欄</code> <code>Simulation Monitors</code>，新增兩張<code>Optimization</code>最常用的<code>BestObjetive</code>及<code>WrostConstraint</code>來輔助觀察。</p><p><img src="/assets/img/vrand_vdoc/ch3/402_simulation_monitors.jpg" alt="402_simulation_monitors"></p><h4 id="335-Post-processing"><a class="anchor hidden-xs" href="#335-Post-processing" title="335-Post-processing"><span class="octicon octicon-link"></span></a>3.3.5 Post processing</h4><p><img src="/assets/img/vrand_vdoc/ch3/505_post_processing.jpg" alt="505_post_processing"></p><p><img src="/assets/img/vrand_vdoc/ch3/506_post_processing.jpg" alt="506_post_processing"></p><p>點選<code>Post Processing</code>中的<code>Show Design Points Table</code>，可以看到總共使用點數為<code>33</code>。也就是說扣掉我們輸入的<code>9</code>個點位，<code>PythonEquation</code> <code>component</code>又被呼叫了<code>33 - 9 =24</code>次。</p><p>對比直接進行最佳化<code>Opt Using PythonEquation</code> <code>task</code>的<code>48</code>次，次數少了<code>48 - 33 = 15</code>次。</p><p>這證明<code>RSA</code>+<code>DOE</code>是一個求解問題的好策略。</p><p><img src="/assets/img/vrand_vdoc/ch3/507_post_processing.jpg" alt="507_post_processing"></p><table>
+</script></span></p><h2 id="-3-Python-Scipy"><a class="anchor hidden-xs" href="#-3-Python-Scipy" title="-3-Python-Scipy"><span class="octicon octicon-link"></span></a><img alt=":battery:" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/battery.png" title=":battery:"> 3. Python Scipy</h2><p>以下程式碼主要參考 <ins><a href="https://docs.scipy.org/doc/scipy/reference/tutorial/optimize.html" target="_blank" rel="noopener">Scipy</a></ins> 的教學文檔設置。</p><p>這裡<code>老駱</code>選擇<code>minimize</code>中的 <ins><a href="https://docs.scipy.org/doc/scipy/reference/optimize.minimize-trustconstr.html#optimize-minimize-trustconstr" target="_blank" rel="noopener"><code>trust-constr</code></a></ins> 方法，因為這個方法不用提供額外的<code>jacobian</code>和<code>hessian</code>函數即可求解，並且在<code>option</code>裡附有<code>verbose</code>選項，可以將其設為<code>2</code>，方便觀察求解過程。為了符合<code>Scipy</code>的格式，下方程式中的<code>x[0]</code>為問題中的<code>x</code>，而<code>x[1]</code>則為問題中的<code>y</code>。</p><pre><code class="python hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="1"></span>
+<span data-linenumber="2"></span>
+<span data-linenumber="3"></span>
+<span data-linenumber="4"></span>
+<span data-linenumber="5"></span>
+<span data-linenumber="6"></span>
+<span data-linenumber="7"></span>
+<span data-linenumber="8"></span>
+<span data-linenumber="9"></span>
+<span data-linenumber="10"></span>
+<span data-linenumber="11"></span>
+<span data-linenumber="12"></span>
+<span data-linenumber="13"></span>
+<span data-linenumber="14"></span>
+<span data-linenumber="15"></span>
+<span data-linenumber="16"></span>
+<span data-linenumber="17"></span>
+<span data-linenumber="18"></span>
+<span data-linenumber="19"></span>
+<span data-linenumber="20"></span>
+<span data-linenumber="21"></span>
+<span data-linenumber="22"></span>
+<span data-linenumber="23"></span>
+<span data-linenumber="24"></span>
+<span data-linenumber="25"></span></div><div class="code"><span class="hljs-keyword">from</span> math <span class="hljs-keyword">import</span> cos
+<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+<span class="hljs-keyword">from</span> scipy.optimize <span class="hljs-keyword">import</span> minimize, Bounds, NonlinearConstraint
+
+<span class="hljs-comment"># Objective function</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">prob</span><span class="hljs-params">(x)</span>:</span>
+    <span class="hljs-keyword">return</span> (x[<span class="hljs-number">0</span>]**<span class="hljs-number">2</span> + x[<span class="hljs-number">1</span>]**<span class="hljs-number">2</span>)/<span class="hljs-number">10</span> - cos(x[<span class="hljs-number">0</span>]) * cos(x[<span class="hljs-number">1</span>])
+
+<span class="hljs-comment"># Constraint equation</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">cons_f</span><span class="hljs-params">(x)</span>:</span>
+    <span class="hljs-keyword">return</span> x[<span class="hljs-number">0</span>]**<span class="hljs-number">2</span> + x[<span class="hljs-number">1</span>]**<span class="hljs-number">2</span>
+nonlinear_constraint = NonlinearConstraint(cons_f, lb=<span class="hljs-number">1.5</span>, ub=np.inf)
+
+<span class="hljs-comment"># Bound of design variables</span>
+bounds = Bounds([<span class="hljs-number">-2</span>, <span class="hljs-number">-2</span>], [<span class="hljs-number">2</span>, <span class="hljs-number">4</span>])
+
+<span class="hljs-comment"># Initial condition</span>
+x0 = np.array([<span class="hljs-number">2</span>, <span class="hljs-number">2</span>])
+
+<span class="hljs-comment"># Solve the question</span>
+resp = minimize(fun=prob, x0=x0, method=<span class="hljs-string">'trust-constr'</span>,
+                bounds=bounds, constraints=[nonlinear_constraint],
+                options={<span class="hljs-string">'verbose'</span>:<span class="hljs-number">2</span>})
+
+print(resp)
+</div></div></code></pre><p><img src="/assets/img/vrand_vdoc/ch5/901_scipy_result.jpg" alt="901_scipy_result"></p><table>
 <thead>
 <tr>
 <th style="text-align:center">()內為<code>PythonEquation</code>被呼叫次數</th>
@@ -155,8 +134,27 @@ y=2
 <td style="text-align:center">-0.26985</td>
 <td style="text-align:center">1.49966</td>
 </tr>
+<tr>
+<td style="text-align:center"><code>Opt Using localPython(48)</code></td>
+<td style="text-align:center">0.86087</td>
+<td style="text-align:center">0.87115</td>
+<td style="text-align:center">-0.26971</td>
+<td style="text-align:center">1.50001</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Python Scipy(0)</code></td>
+<td style="text-align:center">-0.86603</td>
+<td style="text-align:center">0.86603</td>
+<td style="text-align:center">-0.26972</td>
+<td style="text-align:center">1.50000</td>
+</tr>
 </tbody>
-</table><h2 id="-4-聯絡老駱"><a class="anchor hidden-xs" href="#-4-聯絡老駱" title="-4-聯絡老駱"><span class="octicon octicon-link"></span></a><img alt=":mailbox:" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/mailbox.png" title=":mailbox:">  4. 聯絡老駱</h2><div class="alert alert-info">
+</table><p>可以看出<code>Scipy</code>與<code>VisualDOC</code>答案相當接近。</p><p>雖然<code>Scipy</code>求解出來的<code>x</code>為<code>-0.86603</code>，但觀察此問題的<code>f</code>及<code>g</code>，若將<code>x</code>以<code>0.86603</code>代入，並不會影響其值，因</p><ul>
+<li><code>f</code>及<code>g</code>的平方項 : <span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-7-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><msup><mi>x</mi><mn>2</mn></msup><mo>=</mo><mo stretchy=&quot;false&quot;>(</mo><mo>&amp;#x2212;</mo><mi>x</mi><msup><mo stretchy=&quot;false&quot;>)</mo><mn>2</mn></msup></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-95" style="width: 5.714em; display: inline-block;"><span style="display: inline-block; position: relative; width: 4.906em; height: 0px; font-size: 116%;"><span style="position: absolute; clip: rect(1.404em, 1004.91em, 2.804em, -999.997em); top: -2.368em; left: 0em;"><span class="mrow" id="MathJax-Span-96"><span class="msubsup" id="MathJax-Span-97"><span style="display: inline-block; position: relative; width: 1.026em; height: 0px;"><span style="position: absolute; clip: rect(3.397em, 1000.54em, 4.151em, -999.997em); top: -3.984em; left: 0em;"><span class="mi" id="MathJax-Span-98" style="font-family: MathJax_Math-italic;">x</span><span style="display: inline-block; width: 0px; height: 3.99em;"></span></span><span style="position: absolute; top: -4.362em; left: 0.595em;"><span class="mn" id="MathJax-Span-99" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 3.99em;"></span></span></span></span><span class="mo" id="MathJax-Span-100" style="font-family: MathJax_Main; padding-left: 0.272em;">=</span><span class="mo" id="MathJax-Span-101" style="font-family: MathJax_Main; padding-left: 0.272em;">(</span><span class="mo" id="MathJax-Span-102" style="font-family: MathJax_Main;">−</span><span class="mi" id="MathJax-Span-103" style="font-family: MathJax_Math-italic;">x</span><span class="msubsup" id="MathJax-Span-104"><span style="display: inline-block; position: relative; width: 0.811em; height: 0px;"><span style="position: absolute; clip: rect(3.074em, 1000.27em, 4.421em, -999.997em); top: -3.984em; left: 0em;"><span class="mo" id="MathJax-Span-105" style="font-family: MathJax_Main;">)</span><span style="display: inline-block; width: 0px; height: 3.99em;"></span></span><span style="position: absolute; top: -4.362em; left: 0.38em;"><span class="mn" id="MathJax-Span-106" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 3.99em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.373em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.372em; border-left: 0px solid; width: 0px; height: 1.378em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>x</mi><mn>2</mn></msup><mo>=</mo><mo stretchy="false">(</mo><mo>−</mo><mi>x</mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup></math></span></span><script type="math/tex" id="MathJax-Element-7">x^2 = (-x)^2</script></span>。</li>
+<li><code>f</code>及<code>g</code>的三角函數 : <span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-8-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>c</mi><mi>o</mi><mi>s</mi><mo stretchy=&quot;false&quot;>(</mo><mi>x</mi><mo stretchy=&quot;false&quot;>)</mo><mo>=</mo><mi>c</mi><mi>o</mi><mi>s</mi><mo stretchy=&quot;false&quot;>(</mo><mo>&amp;#x2212;</mo><mi>x</mi><mo stretchy=&quot;false&quot;>)</mo></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-107" style="width: 8.839em; display: inline-block;"><span style="display: inline-block; position: relative; width: 7.6em; height: 0px; font-size: 116%;"><span style="position: absolute; clip: rect(1.457em, 1007.49em, 2.804em, -999.997em); top: -2.368em; left: 0em;"><span class="mrow" id="MathJax-Span-108"><span class="mi" id="MathJax-Span-109" style="font-family: MathJax_Math-italic;">c</span><span class="mi" id="MathJax-Span-110" style="font-family: MathJax_Math-italic;">o</span><span class="mi" id="MathJax-Span-111" style="font-family: MathJax_Math-italic;">s</span><span class="mo" id="MathJax-Span-112" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-113" style="font-family: MathJax_Math-italic;">x</span><span class="mo" id="MathJax-Span-114" style="font-family: MathJax_Main;">)</span><span class="mo" id="MathJax-Span-115" style="font-family: MathJax_Main; padding-left: 0.272em;">=</span><span class="mi" id="MathJax-Span-116" style="font-family: MathJax_Math-italic; padding-left: 0.272em;">c</span><span class="mi" id="MathJax-Span-117" style="font-family: MathJax_Math-italic;">o</span><span class="mi" id="MathJax-Span-118" style="font-family: MathJax_Math-italic;">s</span><span class="mo" id="MathJax-Span-119" style="font-family: MathJax_Main;">(</span><span class="mo" id="MathJax-Span-120" style="font-family: MathJax_Main;">−</span><span class="mi" id="MathJax-Span-121" style="font-family: MathJax_Math-italic;">x</span><span class="mo" id="MathJax-Span-122" style="font-family: MathJax_Main;">)</span></span><span style="display: inline-block; width: 0px; height: 2.373em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.372em; border-left: 0px solid; width: 0px; height: 1.316em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi><mi>o</mi><mi>s</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>c</mi><mi>o</mi><mi>s</mi><mo stretchy="false">(</mo><mo>−</mo><mi>x</mi><mo stretchy="false">)</mo></math></span></span><script type="math/tex" id="MathJax-Element-8">cos(x) = cos(-x)</script></span>。</li>
+</ul><div class="alert alert-warning">
+<p><img alt=":flashlight:" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/flashlight.png" title=":flashlight:"> 最後要特別提醒的是，不同的問題各有其適合求解的算法及搭配的參數。改變求解算法及調整其所使用的參數，都可能會得到不同的答案。甚至，有時候這些答案之間，也存在一段不小的差距。此時，就是考驗使用者對問題了解的程度，從中挑出最適合的算法及參數。</p>
+</div><h2 id="-4-聯絡老駱"><a class="anchor hidden-xs" href="#-4-聯絡老駱" title="-4-聯絡老駱"><span class="octicon octicon-link"></span></a><img alt=":mailbox:" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/mailbox.png" title=":mailbox:">  4. 聯絡老駱</h2><div class="alert alert-info">
 <p>如果您或貴單位:</p>
 <ul>
 <li>有導入<code>VR&amp;D</code>產品的意願，但是有報價、採購及發票等問題</li>

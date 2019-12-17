@@ -1,19 +1,20 @@
 ---
 layout: post
-title: VisualDOC_Ch0_Introduction
+title: VDOC_00_Introduction
 categories:
   - Cae
 tags:
   - Cae
   - Vrand
   - VisualDOC
+  - VDOC
   - Optimization
-excerpt: "Vrand及VisualDOC介紹。<br/>"
+excerpt: "VR&D及VisualDOC介紹。<br/>"
 ---
 
 <body>
     <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true" style="position: relative;"><h2 id="-0-目錄"><a class="anchor hidden-xs" href="#-0-目錄" title="-0-目錄"><span class="octicon octicon-link"></span></a><img alt=":bulb:" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/bulb.png" title=":bulb:"> 0. 目錄</h2><p><span class="toc"><ul>
-<li><a href="#VisualDOC_Ch0_Introduction" title="VisualDOC_Ch0_Introduction">VisualDOC_Ch0_Introduction</a><ul>
+<li><a href="#VDOC_00_Introduction" title="VDOC_00_Introduction">VDOC_00_Introduction</a><ul>
 <li><a href="#-0-目錄" title=" 0. 目錄"> 0. 目錄</a></li>
 <li><a href="#-1-聲明" title=" 1. 聲明"> 1. 聲明</a></li>
 <li><a href="#-2-VRampD介紹" title=" 2. VR&amp;D介紹"> 2. VR&amp;D介紹</a></li>
@@ -46,13 +47,13 @@ excerpt: "Vrand及VisualDOC介紹。<br/>"
 <li><code>VisualDOC</code>及其編寫之<a href="#-7-VisualDOC%E6%89%8B%E5%86%8A">手冊</a>皆屬<code>VR&amp;D</code>財產。</li>
 <li>本系列文共計<code>7</code>篇，目的為讓初學者能快速認識<code>VisualDOC</code>。系列文中所有引用及軟體截圖，業已經過<code>VR&amp;D</code>授權使用。
 <ul>
-<li><ins><a href="" target="_blank" rel="noopener">VisualDOC_Ch0_Introduction</a></ins></li>
-<li><ins><a href="{% post_url 2019-12-17-VisualDOC_Ch1_PythonEquation %}" target="_blank" rel="noopener">VisualDOC_Ch1_PythonEquation</a></ins></li>
-<li><ins><a href="{% post_url 2019-12-17-VisualDOC_Ch2_DOE %}" target="_blank" rel="noopener">VisualDOC_Ch2_DOE</a></ins></li>
-<li><ins><a href="{% post_url 2019-12-17-VisualDOC_Ch3_Opt_RSA_Using_DOE %}" target="_blank" rel="noopener">VisualDOC_Ch3_Opt_RSA_Using_DOE</a></ins></li>
-<li><ins><a href="{% post_url 2019-12-17-VisualDOC_Ch4_Executable_Wrapper %}" target="_blank" rel="noopener">VisualDOC_Ch4_Executable_Wrapper</a></ins></li>
-<li><ins><a href="{% post_url 2019-12-17-VisualDOC_Ch5_Python_Scipy %}" target="_blank" rel="noopener">VisualDOC_Ch5_Python_Scipy</a></ins></li>
-<li><ins><a href="{% post_url 2019-12-17-VisualDOC_Ch6_Coupling_with_LSDYNA %}" target="_blank" rel="noopener">VisualDOC_Ch6_Coupling_with_LSDYNA_Opt</a></ins></li>
+<li><ins><a href="" target="_blank" rel="noopener">VDOC_00_Introduction</a></ins></li>
+<li><ins><a href="{% post_url 2019-12-17-VDOC_01_PythonEquation %}" target="_blank" rel="noopener">VDOC_01_PythonEquation</a></ins></li>
+<li><ins><a href="{% post_url 2019-12-17-VDOC_02_DOE %}" target="_blank" rel="noopener">VDOC_02_DOE</a></ins></li>
+<li><ins><a href="{% post_url 2019-12-17-VDOC_03_OptRSA_DOE %}" target="_blank" rel="noopener">VDOC_03_OptRSA_DOE</a></ins></li>
+<li><ins><a href="{% post_url 2019-12-17-VDOC_04_Executable_Wrapper %}" target="_blank" rel="noopener">VDOC_04_Executable_Wrapper</a></ins></li>
+<li><ins><a href="{% post_url 2019-12-17-VDOC_05_Python_Scipy %}" target="_blank" rel="noopener">VDOC_05_Python_Scipy</a></ins></li>
+<li><ins><a href="{% post_url 2019-12-17-VDOC_06_LSDYNA %}" target="_blank" rel="noopener">VDOC_06_LSDYNA</a></ins></li>
 </ul>
 </li>
 <li>您可以在 <ins><a href="http://www.vrand.com/" target="_blank" rel="noopener">VR&amp;D官網</a></ins> 找到其相關產品及聯絡方式。</li>
