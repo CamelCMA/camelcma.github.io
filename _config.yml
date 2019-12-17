@@ -4,7 +4,7 @@ highlighter:      rouge
 
 # Setup
 title:            'CaeMlAi'
-tagline:          'A Space for CAE + ML + AI'
+tagline:          'A Space for Cae + Ml + Ai'
 description:      'Let''s dive into the world of CMA!'
 url:              'https://caeml.ai'
 baseurl:          null
@@ -46,3 +46,4 @@ defaults:
     values:
       image: true
 
+future: true

@@ -1,19 +1,21 @@
 ---
 layout: post
-title: Vrand_VisualDOC_Ch5_Python_Scipy
+title: VisualDOC_Ch5_Python_Scipy
 categories:
-  - Vrand
+  - Cae
 tags:
   - Cae
   - Vrand
   - VisualDOC
   - Optimization
-excerpt_separator: <!--more-->
+  - Python
+  - Scipy
+excerpt: "應用Python Scipy進行函數最小化求解。<br/>"
 ---
 
 <body>
     <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h2 id="-0-目錄"><a class="anchor hidden-xs" href="#-0-目錄" title="-0-目錄"><span class="octicon octicon-link"></span></a><img alt=":bulb:" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/bulb.png" title=":bulb:"> 0. 目錄</h2><p><span class="toc"><ul>
-<li><a href="#Vrand_VisualDOC_Ch5_Python_Scipy" title="Vrand_VisualDOC_Ch5_Python_Scipy">Vrand_VisualDOC_Ch5_Python_Scipy</a><ul>
+<li><a href="#VisualDOC_Ch5_Python_Scipy" title="VisualDOC_Ch5_Python_Scipy">VisualDOC_Ch5_Python_Scipy</a><ul>
 <li><a href="#-0-目錄" title=" 0. 目錄"> 0. 目錄</a></li>
 <li><a href="#-1-老駱提醒" title=" 1. 老駱提醒"> 1. 老駱提醒</a></li>
 <li><a href="#-2-問題描述" title=" 2. 問題描述"> 2. 問題描述</a></li>
@@ -24,11 +26,9 @@ excerpt_separator: <!--more-->
 </ul>
 </span></p>
 
-<!--more-->
-
 <h2 id="-1-老駱提醒"><a class="anchor hidden-xs" href="#-1-老駱提醒" title="-1-老駱提醒"><span class="octicon octicon-link"></span></a><img alt=":mega:" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/mega.png" title=":mega:"> 1. 老駱提醒</h2><div class="alert alert-info">
 <ul>
-<li>請先確認，您已經閱讀 <ins><a href="{% post_url 2019-12-17-Vrand_VisualDOC_Ch0_Introduction %}" target="_blank" rel="noopener">Vrand_VisualDOC_Ch0_Introduction</a></ins> 中的聲明。</li>
+<li>請先確認，您已經閱讀 <ins><a href="{% post_url 2019-12-17-VisualDOC_Ch0_Introduction %}" target="_blank" rel="noopener">VisualDOC_Ch0_Introduction</a></ins> 中的聲明。</li>
 <li>本文補充說明如何利用<code>Python</code> <code>Scipy</code>進行函數最小化求解。</li>
 </ul>
 </div><h2 id="-2-問題描述"><a class="anchor hidden-xs" href="#-2-問題描述" title="-2-問題描述"><span class="octicon octicon-link"></span></a><img alt=":question:" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/question.png" title=":question:"> 2. 問題描述</h2><p><code>Minimize Objective Function</code> <span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-1-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>f</mi><mo stretchy=&quot;false&quot;>(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy=&quot;false&quot;>)</mo></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-1" style="width: 3.343em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.858em; height: 0px; font-size: 116%;"><span style="position: absolute; clip: rect(1.457em, 1002.75em, 2.804em, -999.997em); top: -2.368em; left: 0em;"><span class="mrow" id="MathJax-Span-2"><span class="mi" id="MathJax-Span-3" style="font-family: MathJax_Math-italic;">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.057em;"></span></span><span class="mo" id="MathJax-Span-4" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-5" style="font-family: MathJax_Math-italic;">x</span><span class="mo" id="MathJax-Span-6" style="font-family: MathJax_Main;">,</span><span class="mi" id="MathJax-Span-7" style="font-family: MathJax_Math-italic; padding-left: 0.164em;">y<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-8" style="font-family: MathJax_Main;">)</span></span><span style="display: inline-block; width: 0px; height: 2.373em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.372em; border-left: 0px solid; width: 0px; height: 1.316em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></math></span></span><script type="math/tex" id="MathJax-Element-1">f(x,y)</script></span>:<br>
