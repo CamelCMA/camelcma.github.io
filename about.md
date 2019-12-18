@@ -14,7 +14,7 @@ sidebar_link: true
 ## About Camel
 偶然間發現`CaeMl`兩個字合起來和`Camel`的拼法很接近，覺得有趣。<br/>
 不妨就將`Camel`權充英文筆名，並將中文筆名譯作`老駱`吧!<br/>
-歡迎透過 [camel@caeml.ai](camel@caeml.ai) 聯絡老駱。
+歡迎透過 <ins><a href="mailto:camel@caeml.ai" target="_blank" rel="noopener">camel@caeml.ai</a></ins> 聯絡老駱。
 
 ## About 目標
 在學習過程中，分享所學，記錄心得。
