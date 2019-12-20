@@ -61,8 +61,8 @@ excerpt: "VR&D及VisualDOC介紹。<br/>"
 <li><img alt=":tada:" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/tada.png" title=":tada:"> 特別感謝<code>VR&amp;D</code> <code>President/COO Mr. Juan Pablo Leiva</code>免費提供老駱<code>VisualDOC</code> trial license作學習之用，並於過程中持續提供技術支援。</li>
 </ul>
 </div><h2 id="-2-VRampD介紹"><a class="anchor hidden-xs" href="#-2-VRampD介紹" title="-2-VRampD介紹"><span class="octicon octicon-link"></span></a><img alt=":earth_americas:" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/earth_americas.png" title=":earth_americas:"> 2. VR&amp;D介紹</h2><iframe width="662" height="371" src="https://www.youtube.com/embed/DpYWaOAB1FE" allowfullscreen=""></iframe><p><code>VR&amp;D</code>全名為<code>Vanderplaats Research &amp; Development</code>，是由<code>Dr. Garret N. Vanderplaats</code>於<code>1984</code>年在美國創立，詳細介紹可以參考 <ins><a href="http://www.vrand.com/about-us/" target="_blank" rel="noopener">VR&amp;D官網About Us</a></ins>。</p><p>關於<code>Dr. Garret N. Vanderplaats</code>的生平，<code>VR&amp;D</code>官網提供了 <ins><a href="http://www.vrand.com/sites/default/files/pub/VR&amp;D_GV_Interview.pdf" target="_blank" rel="noopener">Interview with Dr. Garret (Gary) N. Vanderplaats</a></ins> 及 <ins><a href="http://www.vrand.com/sites/default/files/pub/GradientOpt.pdf" target="_blank" rel="noopener">Technical Story of Dr. Garret (Gary) N. Vanderplaats</a></ins> 兩篇文章，老駱覺得都相當值得一看。其中也提到了許多有關最佳化演算法及程式的歷史故事，例如:<code>GENESIS</code>和<code>MSC Nastran SOL200</code>的淵源、現在市售的某些結構最佳化軟體，是源自當初他所開發的<code>CONMIN(1972)</code>和<code>ADS(1984)</code>程式等等。對最佳化理論及應用有興趣的朋友，可以繼續觀看下面這個由<code>Dr. Garret (Gary) N. Vanderplaats</code>所主講的影片。</p><iframe width="662" height="371" src="https://www.youtube.com/embed/1XdXHrf3nFE" allowfullscreen=""></iframe><p>此外，官網也提供了許多論文，<ins><a href="http://www.vrand.com/resources/publications/archive/" target="_blank" rel="noopener">可以下載</a></ins> 。</p><p>這邊老駱引用一段<code>Interview with Dr. Garret (Gary) N. Vanderplaats</code>內的話，裡面提到了成立<code>VR&amp;D</code>的兩大初衷是:</p><ul>
-<li>提供世界上最好的最佳化軟體</li>
-<li>打造最頂尖的專家團隊</li>
+<li>提供世界上最好的最佳化軟體。</li>
+<li>打造最頂尖的專家團隊。</li>
 </ul><p>而他確信他已經完成了目標，所以可以將管理公司的任務交棒給非常優秀的繼任者，<code>Mr. Juan Pablo Leiva</code>。自己則能夠多點空閒時間，來做點其它想做的事。</p><blockquote style="border-left-color: rgb(144, 123, 247);">
 <p>To back up, creating the company, I had two goals: one is to have the best software in the optimization world, and the other is to have the best staff of experts. I’m very confident that I’ve achieved those goals.That’s why about five years ago or six years ago, I forget when, I was able to turn the management of the company over to Juan Pablo Leiva who is a superstar in his own right. Now I can spend time doing a little bit of research, a little bit of relaxing, and letting other people do the day-to-day operations.<small><i class="fa fa-user"></i> Dr. Garret N. Vanderplaats</small><span class="color" data-color="#907bf7"></span></p>
 </blockquote><h2 id="-3-VRampD產品"><a class="anchor hidden-xs" href="#-3-VRampD產品" title="-3-VRampD產品"><span class="octicon octicon-link"></span></a><img alt=":thumbsup:" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/thumbsup.png" title=":thumbsup:"> 3. VR&amp;D產品</h2><p><code>VR&amp;D</code>旗下有兩條主要產品線，<ins><a href="http://www.vrand.com/products/genesis/" target="_blank" rel="noopener">GENESIS</a></ins> 及 <ins><a href="http://www.vrand.com/products/visualdoc/" target="_blank" rel="noopener">VisualDOC</a></ins>。</p><p><code>GENESIS</code>是一款偏向結構分析及結構最佳化的產品，可以進行下列分析:</p><ul>
@@ -162,10 +162,10 @@ excerpt: "VR&D及VisualDOC介紹。<br/>"
 </tr>
 </tbody>
 </table><h3 id="51-Work-Flow"><a class="anchor hidden-xs" href="#51-Work-Flow" title="51-Work-Flow"><span class="octicon octicon-link"></span></a>5.1 Work Flow</h3><p>設定<code>Work Flow</code>有兩個方法。</p><h4 id="511-拖曳法"><a class="anchor hidden-xs" href="#511-拖曳法" title="511-拖曳法"><span class="octicon octicon-link"></span></a>5.1.1 拖曳法</h4><p>拖曳法是利用拖拉的方式從<code>E欄</code>中選取所需要的<code>icon</code>，並拖曳至<code>F欄</code>，進行適當的組合後，再利用<code>G欄</code>的按鍵，完成<code>Work Flow</code>的連接。</p><p>拖曳法的特點為:</p><ul>
-<li>操作上比較直觀</li>
-<li>須要手動進行拖曳並連接</li>
-<li>擁有比較高的建模彈性</li>
-<li>適用於有多步流程的大模型或客製化的修改</li>
+<li>操作上比較直觀。</li>
+<li>須要手動進行拖曳並連接。</li>
+<li>擁有比較高的建模彈性。</li>
+<li>適用於有多步流程的大模型或客製化的修改。</li>
 </ul><p>拖曳法須要用到<code>G欄</code>內的四個按鈕:</p><ul>
 <li><code>Switch to connection mode</code>: 可以進入<code>connetion mode</code>，手動連接各個<code>component</code>。連接完成後，可按鍵盤<code>ESC</code>鍵跳離<code>connection mode</code>。</li>
 <li><code>Auto connect all models</code> : 連接的邏輯是根據<code>D欄</code>內的順序，可以利用<code>D欄</code>下方的上下鍵調整各<code>component</code>的位置。如果使用者的滑鼠是點在<code>D欄</code>裡的<code>Flowchart Components</code>的話，會對整個<code>Work Flow</code>進行自動連接。但如果使用者只想自動連接特定<code>Component Editor外/中層</code>內<code>component</code>的話，須要在<code>D欄</code>先將滑鼠點在那個<code>Component Editor外/中層</code>上。</li>
@@ -176,11 +176,11 @@ excerpt: "VR&D及VisualDOC介紹。<br/>"
 </div><p>舉例來說，假如想要最小化一個函數，如何利用拖曳法完成呢?<br>
 一個可能的參考作法是:</p><p>從<code>E欄</code>中選擇<code>Add optimization component</code>拖曳至<code>F欄</code>。</p><p><img src="/assets/img/vrand_vdoc/ch0/101_work_flow.jpg" alt="101_work_flow"></p><p>從<code>E欄</code>中選擇<code>Add PythonEquation component</code>拖曳進<code>F欄</code>。接著對<code>Add PythonEquation component</code>按右鍵<code>cut</code>，然候對<code>optimization component</code>按右鍵<code>Paste</code>。如此就可以利用<code>PythonEquation component</code>來進行<code>optimization</code>。</p><p><img src="/assets/img/vrand_vdoc/ch0/102_work_flow.jpg" alt="102_work_flow"></p><p>從<code>E欄中</code>選擇<code>stop</code>拖曳至<code>F欄</code>(很容易忘記…)。</p><p><img src="/assets/img/vrand_vdoc/ch0/103_work_flow.jpg" alt="103_work_flow"></p><p>利用<code>G欄</code>內的第一個按鍵<code>Switch to connection mode</code>，手動連接各個<code>component</code>。或是將各<code>component</code>於<code>D欄</code>中的位置調整好後，再使用<code>Auto connect all models</code>連接。</p><p><img src="/assets/img/vrand_vdoc/ch0/104_work_flow.jpg" alt="104_work_flow"></p><p>利用<code>G欄</code>內的最後一個按鍵<code>Automatically rearrange all models</code>，重新排版。</p><p><img src="/assets/img/vrand_vdoc/ch0/105_work_flow.jpg" alt="105_work_flow"></p><h4 id="512-Quick-Start"><a class="anchor hidden-xs" href="#512-Quick-Start" title="512-Quick-Start"><span class="octicon octicon-link"></span></a>5.1.2 Quick Start</h4><p><code>Quick start</code>是<code>VisualDOC</code>內建的流程精靈。<br>
 <code>Quick start</code>的特點為:</p><ul>
-<li>必須事先明確想做的分析類型</li>
-<li>幾個鍵即能快速搭建並自動連接想要的應用</li>
-<li>建模彈性比較小</li>
-<li>適用流程單純的小模型及常規分析</li>
-<li><a href="#61-Project-and-Task">僅適用於每個<code>project</code>的第<code>1</code>個<code>task</code></a></li>
+<li>必須事先明確想做的分析類型。</li>
+<li>幾個鍵即能快速搭建並自動連接想要的應用。</li>
+<li>建模彈性比較小。</li>
+<li>適用流程單純的小模型及常規分析。</li>
+<li><a href="#61-Project-and-Task">僅適用於每個<code>project</code>的第<code>1</code>個<code>task</code>。</a></li>
 </ul><p>同樣地，假如想要最小化一個函數，如何利用<code>Quick start</code>完成呢?<br>
 一個可能的參考作法是:</p><p>從<code>A欄</code>中點選<code>File</code>後，再點選<code>Quick Start</code>(另一個方法是點選<code>B欄</code>中的<code>Quick Start icon</code>)。</p><p><img src="/assets/img/vrand_vdoc/ch0/106_work_flow.jpg" alt="106_work_flow"></p><p>選擇<code>Direct Optimization</code>。</p><p><img src="/assets/img/vrand_vdoc/ch0/107_work_flow.jpg" alt="107_work_flow"></p><p>選擇<code>PythonEquation</code>。</p><p><img src="/assets/img/vrand_vdoc/ch0/108_work_flow.jpg" alt="108_work_flow"></p><p>填入想要的檔案名並存檔後，<code>Work Flow</code>就完成了。</p><p><img src="/assets/img/vrand_vdoc/ch0/109_work_flow.jpg" alt="109_work_flow"></p><h3 id="52-Component-Editor"><a class="anchor hidden-xs" href="#52-Component-Editor" title="52-Component-Editor"><span class="octicon octicon-link"></span></a>5.2 Component Editor</h3><p><code>Component Editor</code>的功能是設定<code>Work Flow</code>中選取<code>component</code>的細部設定。</p><h4 id="521-5種component類型"><a class="anchor hidden-xs" href="#521-5種component類型" title="521-5種component類型"><span class="octicon octicon-link"></span></a>5.2.1 5種component類型</h4><p>老駱自己將<code>component</code>分為<code>5</code>種類型。</p><h5 id="5211-Component-Editor內層直接支援的第三方軟體"><a class="anchor hidden-xs" href="#5211-Component-Editor內層直接支援的第三方軟體" title="5211-Component-Editor內層直接支援的第三方軟體"><span class="octicon octicon-link"></span></a>5.2.1.1 Component Editor內層(直接支援的第三方軟體)</h5><p><code>VisualDOC</code>針對以下軟體的使用特性，幫使用者處理好<code>I/O</code>介面，方便使用。</p><ul>
 <li><code>MATLAB</code></li>
@@ -212,8 +212,8 @@ excerpt: "VR&D及VisualDOC介紹。<br/>"
 <li><code>Stop</code></li>
 </ul><h4 id="522-快速輸入變數"><a class="anchor hidden-xs" href="#522-快速輸入變數" title="522-快速輸入變數"><span class="octicon octicon-link"></span></a>5.2.2 快速輸入變數</h4><p><code>Component Editor外/中/內三層</code>輸入變數的方式及相關設定很直觀。</p><p>老駱這邊提供兩個快速設定變數的方法。</p><h4 id="5221-Add-new-data"><a class="anchor hidden-xs" href="#5221-Add-new-data" title="5221-Add-new-data"><span class="octicon octicon-link"></span></a>5.2.2.1 Add new data</h4><p><code>Add new data</code> 方便新增單一變數。</p><p>例如要新增一個<code>test_input</code>的<code>scalar</code> <code>input</code>變數。<br>
 可以，先按下<code>Add new data</code>，輸入變數名<code>test_input</code>，按下<code>Next</code>。</p><p><img src="/assets/img/vrand_vdoc/ch0/201_component_editor.jpg" alt="201_component_editor"></p><p>再按下<code>Finish</code>。</p><p><img src="/assets/img/vrand_vdoc/ch0/202_component_editor.jpg" alt="202_component_editor"></p><p>這樣就創建完成。</p><p><img src="/assets/img/vrand_vdoc/ch0/203_component_editor.jpg" alt="203_component_editor"></p><h4 id="5222-Component-Data-Generator"><a class="anchor hidden-xs" href="#5222-Component-Data-Generator" title="5222-Component-Data-Generator"><span class="octicon octicon-link"></span></a>5.2.2.2 Component Data Generator</h4><p><code>Component Data Generator</code>適用於:</p><ul>
-<li>大規模的建立變數及賦值</li>
-<li>大規模的修改變數及其值</li>
+<li>大規模的建立變數及賦值。</li>
+<li>大規模的修改變數及其值。</li>
 </ul><p>舉例來說，如果要建造<code>w1~w5</code> <code>5</code>個<code>input</code>變數，並將各變數的<code>Lower Bound</code>設為<code>2</code>，<code>Upper Bound</code>設為<code>4</code>及<code>Initial Value</code>設為<code>2</code>，可以在<code>create panel</code>下這樣設定。</p><p><img src="/assets/img/vrand_vdoc/ch0/204_component_editor.jpg" alt="204_component_editor"></p><p>按下<code>Create Variables</code>即創建完成。</p><p><img src="/assets/img/vrand_vdoc/ch0/205_component_editor.jpg" alt="205_component_editor"></p><p>假如要將變數名改為<code>a101~a105</code>，並將各變數的<code>Lower Bound</code>設為<code>20</code>，<code>Upper Bound</code>設為<code>40</code>及<code>Initial Value</code>設為<code>30</code>，可以在<code>Modify panel</code>下這樣設定(輸入好數字後，請記得按下旁邊的<code>set</code>或<code>Rename</code>按鍵，<code>VisualDOC</code>才會更新變數)。</p><p><img src="/assets/img/vrand_vdoc/ch0/206_component_editor.jpg" alt="206_component_editor"></p><p>變數即修改完成。</p><p><img src="/assets/img/vrand_vdoc/ch0/207_component_editor.jpg" alt="207_component_editor"></p><h3 id="53-Data-Linker"><a class="anchor hidden-xs" href="#53-Data-Linker" title="53-Data-Linker"><span class="octicon octicon-link"></span></a>5.3. Data Linker</h3><p><code>Data Linker</code>是一個建立<code>Component Editor外/中層</code>及<code>Component Editor內層</code>溝通的橋粱。一般來說<code>外/中/內三層</code>的變數名最好設為一樣，但有時候因為建模的方便性或是想讓最後輸出的變數名有較好的辨識度時，各層變數名可能會不一致。此時，須要利用<code>Data Linker</code>連接各層變數。</p><p>如果<code>外/中/內三層</code>的各個變數皆相同，則可以利用左側的<code>Automatically add data to the selected model</code>來自動連接。</p><div class="alert alert-warning">
 <p><img alt=":flashlight:" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/flashlight.png" title=":flashlight:"> 請記得要先按旁邊綠色橢圓圈起來的<code>Component Editor外/中層</code>，<code>Automatically add data to the selected model</code>這個按鈕才會有作用。</p>
 </div><p><img src="/assets/img/vrand_vdoc/ch0/301_data_linker.jpg" alt="301_data_linker"></p><p>設定完成後，可以藉由旁邊的表格來觀察<code>Data Linker</code>的連接狀態。</p><p><img src="/assets/img/vrand_vdoc/ch0/302_data_linker.jpg" alt="302_data_linker"></p><p>一般來說，設定問題時，會先依照<a href="#52-Component-Editor">5.2 Component Editor</a>所述，設定好<code>Component Editor</code>，再來設定<code>Data Linker</code>。但如果如果遇到變數名一樣的問題時，可以考慮先設定<code>Component Editor內層</code>，接著就設定<code>Data Linker</code>。因為如果先進行<code>Data Linker</code>中的<code>Automatically add data to the selected model</code>，<code>VisualDOC</code>將會自動將<code>Component Editor內層</code>設立的變數傳送到<code>Component Editor外/中層</code>，可以省去建立參數的功夫，專注於其它的設定。</p><p>另外要注意的是，如果選擇先手動建立<code>Component Editor外/中層</code>，那麼就無法使用<code>Data Linker</code>中的<code>Automatically add data to the selected model</code>的功能，須要手動連接各個變數之間的關係。</p><p>最後，如果模型只有<code>外/內兩層</code>，<code>Data Linker</code>僅須設定一次；但若模型<br>
@@ -272,10 +272,10 @@ excerpt: "VR&D及VisualDOC介紹。<br/>"
 </ul><h2 id="-10-聯絡老駱"><a class="anchor hidden-xs" href="#-10-聯絡老駱" title="-10-聯絡老駱"><span class="octicon octicon-link"></span></a><img alt=":mailbox:" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/mailbox.png" title=":mailbox:">  10. 聯絡老駱</h2><div class="alert alert-info">
 <p>如果您或貴單位:</p>
 <ul>
-<li>有導入<code>VR&amp;D</code>產品的意願，但是有報價、採購及發票等問題</li>
-<li>有教育訓練或顧問需求</li>
-<li>有些建言指教</li>
-<li>想交個朋友<br>
+<li>有導入<code>VR&amp;D</code>產品的意願，但是有報價、採購及發票等問題。</li>
+<li>有教育訓練或顧問需求。</li>
+<li>有些建言指教。</li>
+<li>想交個朋友。<br>
 歡迎透過 <img alt=":camel:" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/camel.png" title=":camel:"> <ins><a href="mailto:camel@caeml.ai" target="_blank" rel="noopener">camel@caeml.ai</a></ins> 聯絡老駱。</li>
 </ul>
 </div>
