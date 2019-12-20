@@ -112,7 +112,7 @@ y=2
 </tr>
 </tbody>
 </table><p>以上，可證明<code>3.1</code>節與<code>3.2</code>節操作，可得到相同的答案。</p><h3 id="33-RSA-Using-DOE"><a class="anchor hidden-xs" href="#33-RSA-Using-DOE" title="33-RSA-Using-DOE"><span class="octicon octicon-link"></span></a>3.3 RSA Using DOE</h3><p>本節講述如何將<code>RSA</code>為<code>Component Ediror外層</code>， <code>PythonEquation</code>為<code>Component Ediror內層</code>。</p><h4 id="331-Work-Flow"><a class="anchor hidden-xs" href="#331-Work-Flow" title="331-Work-Flow"><span class="octicon octicon-link"></span></a>3.3.1 Work Flow</h4><p>打開<code>Opt Using PythonEquation</code>這個<code>task</code>，另存一個新的<code>task</code>，命名為<code>RSA Using DOE</code>。接著至<code>E欄</code>中將<code>Add Response Surface Approximated optimization component</code>拖曳至<code>F欄</code>。</p><p><img src="/assets/img/vrand_vdoc/ch3/104_work_flow.jpg" alt="104_work_flow"></p><p>將<code>PythonEquation</code> <code>component</code>剪下貼上至<code>RSA</code>中，並刪除<code>DOE</code> <code>component</code>。</p><p><img src="/assets/img/vrand_vdoc/ch3/105_work_flow.jpg" alt="105_work_flow"></p><p>重新連接所有<code>component</code>。</p><p><img src="/assets/img/vrand_vdoc/ch3/106_work_flow.jpg" alt="106_work_flow"></p><h4 id="332-Data-Linker"><a class="anchor hidden-xs" href="#332-Data-Linker" title="332-Data-Linker"><span class="octicon octicon-link"></span></a>3.3.2 Data Linker</h4><p>點選<code>C欄</code> <code>Data Linker</code>，使用左側的<code>Automatically add data to the selected model</code>自動連接。</p><p><img src="/assets/img/vrand_vdoc/ch3/302_data_linker.jpg" alt="302_data_linker"></p><h4 id="333-Component-Editor"><a class="anchor hidden-xs" href="#333-Component-Editor" title="333-Component-Editor"><span class="octicon octicon-link"></span></a>3.3.3 Component Editor</h4><p>點選<code>C欄</code> <code>Component Editor</code>外層的<code>RSA</code> <code>component</code>，並進行下列操作:</p><ul>
-<li>設定<code>x</code>的<code>Lower Bound</code>為<code>-2</code>及<code>Upper Bound</code>為<code>2</code></li>
+<li>設定<code>x</code>的<code>Lower Bound</code>為<code>-2</code>及<code>Upper Bound</code>為<code>2</code>。</li>
 <li>設定<code>y</code>的<code>Lower Bound</code>為<code>-2</code>及<code>Upper Bound</code>為<code>4</code>。</li>
 <li>勾選<code>f</code>為<code>Objective</code>、不勾選其為<code>Constraint</code>，並確定其<code>Goal</code>維持預設的<code>Minimize</code>。</li>
 <li>勾選<code>g</code>為<code>Constraint</code>，並設定其<code>Lower Bound</code>為<code>1.5</code>。</li>
@@ -159,10 +159,10 @@ y=2
 </table><h2 id="-4-聯絡老駱"><a class="anchor hidden-xs" href="#-4-聯絡老駱" title="-4-聯絡老駱"><span class="octicon octicon-link"></span></a><img alt=":mailbox:" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/mailbox.png" title=":mailbox:">  4. 聯絡老駱</h2><div class="alert alert-info">
 <p>如果您或貴單位:</p>
 <ul>
-<li>有導入<code>VR&amp;D</code>產品的意願，但是有報價、採購及發票等問題</li>
-<li>有教育訓練或顧問需求</li>
-<li>有些建言指教</li>
-<li>想交個朋友<br>
+<li>有導入<code>VR&amp;D</code>產品的意願，但是有報價、採購及發票等問題。</li>
+<li>有教育訓練或顧問需求。</li>
+<li>有些建言指教。</li>
+<li>想交個朋友。<br>
 歡迎透過 <img alt=":camel:" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/camel.png" title=":camel:"> <ins><a href="mailto:camel@caeml.ai" target="_blank" rel="noopener">camel@caeml.ai</a></ins> 聯絡老駱。</li>
 </ul>
 </div>

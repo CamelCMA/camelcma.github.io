@@ -75,10 +75,10 @@ y=2
 </table><h2 id="-4-聯絡老駱"><a class="anchor hidden-xs" href="#-4-聯絡老駱" title="-4-聯絡老駱"><span class="octicon octicon-link"></span></a><img alt=":mailbox:" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/mailbox.png" title=":mailbox:">  4. 聯絡老駱</h2><div class="alert alert-info">
 <p>如果您或貴單位:</p>
 <ul>
-<li>有導入<code>VR&amp;D</code>產品的意願，但是有報價、採購及發票等問題</li>
-<li>有教育訓練或顧問需求</li>
-<li>有些建言指教</li>
-<li>想交個朋友<br>
+<li>有導入<code>VR&amp;D</code>產品的意願，但是有報價、採購及發票等問題。</li>
+<li>有教育訓練或顧問需求。</li>
+<li>有些建言指教。</li>
+<li>想交個朋友。<br>
 歡迎透過 <img alt=":camel:" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/camel.png" title=":camel:"> <ins><a href="mailto:camel@caeml.ai" target="_blank" rel="noopener">camel@caeml.ai</a></ins> 聯絡老駱。</li>
 </ul>
 </div>

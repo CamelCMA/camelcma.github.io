@@ -95,14 +95,14 @@ g = x**<span class="hljs-number">2</span> + y**<span class="hljs-number">2</span
 </div></div></code></pre><div class="alert alert-warning">
 <p><img alt=":flashlight:" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/flashlight.png" title=":flashlight:"> 使用<code>Executable Wrapper</code>，必須自己處理<code>I/O</code>介面，雖然比較麻煩，但是對於複雜的<code>I/O</code>文件，可以有很好的控制權。此外，由於已經接到了本機的<code>Python</code>環境，所以這表示可以自由<code>import</code>其它模組來運用，像是<code>pandas</code>、<code>numpy</code>、<code>scipy</code>等等，後續可以做相當多的運用。</p>
 </div><p>點選<code>C欄</code> <code>Component Editor</code>內的<code>Executable Wrapper</code> <code>component</code>，於右方欄位進行下列設定:</p><ul>
-<li>在<code>Local Analysis Program Definition</code>中選擇<code>Python</code>的執行方法。<code>老駱</code>自己是習慣用環境變數，所以打了<code>Python</code>。您也可以直接用路徑來指定。舉例來說，如果你想用<code>Anaconda</code>下<code>1</code>個名叫<code>VisualDOC</code>的虛擬環境來執行的話，您可以將<code>Fie Path Type</code>設為<code>Absolute</code>，並於<code>File Path</code>輸入<code>C:\Users\您的使用者名稱\Anaconda3\envs\VisualDOC\python.exe</code></li>
-<li>在<code>Analysis options</code> 裡的<code>Program Arguments</code>內輸入<code>Equation.py</code></li>
-<li>在<code>Input File Definition</code>的<code>File Path</code>選擇<code>input.txt</code></li>
-<li>在<code>Output File Definition</code>的<code>File Path</code>選擇<code>Output.txt</code></li>
+<li>在<code>Local Analysis Program Definition</code>中選擇<code>Python</code>的執行方法。老駱自己是習慣用環境變數，所以打了<code>Python</code>。此外也可以直接用路徑來指定。舉例來說，例如想用<code>Anaconda</code>下<code>1</code>個名叫<code>VisualDOC</code>的虛擬環境來執行的話，可以將<code>Fie Path Type</code>設為<code>Absolute</code>，並於<code>File Path</code>輸入<code>C:\Users\您的使用者名稱\Anaconda3\envs\VisualDOC\python.exe</code>。</li>
+<li>在<code>Analysis options</code> 裡的<code>Program Arguments</code>內輸入<code>Equation.py</code>。</li>
+<li>在<code>Input File Definition</code>的<code>File Path</code>選擇<code>input.txt</code>。</li>
+<li>在<code>Output File Definition</code>的<code>File Path</code>選擇<code>Output.txt</code>。</li>
 </ul><p>輸入完成後，右方的欄位應該會像:<br>
 <img src="/assets/img/vrand_vdoc/ch4/201_component_editor.jpg" alt="201_component_editor"></p><p>點選左方欄位，進行下列設定:</p><ul>
 <li>輸入<code>x</code>、<code>y</code>、<code>f</code>及<code>g</code>。</li>
-<li>將<code>x</code>及<code>y</code>的<code>Input/Output</code>設定為<code>input</code></li>
+<li>將<code>x</code>及<code>y</code>的<code>Input/Output</code>設定為<code>input</code>。</li>
 <li>將<code>f</code>及<code>g</code>的<code>Input/Output</code>設定為<code>output</code>。</li>
 </ul><p>如 <ins><a href="{% post_url 2019-12-17-VDOC_01_PythonEquation %}" target="_blank" rel="noopener">VDOC_01_PythonEquation</a></ins> 所述，其實不一定要指定<code>x</code>及<code>y</code>的<code>Initial Value</code>，但如果指定的話，將有助於確認與本機<code>Python</code>環境是否正確設定。事實上，如果不指定此處<code>x</code>及<code>y</code>的<code>Initial Value</code>，<code>VisualDOC</code>還是能正常執行。</p><p>輸入完成後，左方的欄位應該會像:<br>
 <img src="/assets/img/vrand_vdoc/ch4/202_component_editor.jpg" alt="202_component_editor"></p><h3 id="33-Data-Linker"><a class="anchor hidden-xs" href="#33-Data-Linker" title="33-Data-Linker"><span class="octicon octicon-link"></span></a>3.3 Data Linker</h3><p>點選<code>C欄</code>中的<code>Data Linker</code>，使用<code>Automatically add data to the selected model</code>來自動連接。</p><p><img src="/assets/img/vrand_vdoc/ch4/301_data_linker.jpg" alt="301_data_linker"></p><p>接下來點選<code>C欄</code>中的<code>component editor外層</code>的<code>Optimization</code> <code>component</code>，變數已經新增好了。</p><h3 id="34-Component-Editor內層"><a class="anchor hidden-xs" href="#34-Component-Editor內層" title="34-Component-Editor內層"><span class="octicon octicon-link"></span></a>3.4 Component Editor內層</h3><p>點選<code>C欄</code> <code>Component Editor</code>內的<code>Optimization</code> <code>component</code>，進行下列設定:</p><ul>
@@ -160,10 +160,10 @@ g = x**<span class="hljs-number">2</span> + y**<span class="hljs-number">2</span
 </table><p>可以看出來，求解結果與<code>Opt Using PythonEquation</code>一致。</p><h2 id="-4-聯絡老駱"><a class="anchor hidden-xs" href="#-4-聯絡老駱" title="-4-聯絡老駱"><span class="octicon octicon-link"></span></a><img alt=":mailbox:" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/mailbox.png" title=":mailbox:">  4. 聯絡老駱</h2><div class="alert alert-info">
 <p>如果您或貴單位:</p>
 <ul>
-<li>有導入<code>VR&amp;D</code>產品的意願，但是有報價、採購及發票等問題</li>
-<li>有教育訓練或顧問需求</li>
-<li>有些建言指教</li>
-<li>想交個朋友<br>
+<li>有導入<code>VR&amp;D</code>產品的意願，但是有報價、採購及發票等問題。</li>
+<li>有教育訓練或顧問需求。</li>
+<li>有些建言指教。</li>
+<li>想交個朋友。<br>
 歡迎透過 <img alt=":camel:" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/camel.png" title=":camel:"> <ins><a href="mailto:camel@caeml.ai" target="_blank" rel="noopener">camel@caeml.ai</a></ins> 聯絡老駱。</li>
 </ul>
 </div>
