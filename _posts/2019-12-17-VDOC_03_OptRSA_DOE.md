@@ -7,6 +7,7 @@ tags:
   - Cae
   - Vrand
   - VisualDOC
+  - VDOC
   - Optimization
 excerpt: "應用VisualDOC的Optimization及RSA進行函數最小化求解。<br/>"
 ---

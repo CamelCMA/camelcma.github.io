@@ -7,8 +7,8 @@ tags:
   - Cae
   - Vrand
   - VisualDOC
-  - Optization
   - VDOC
+  - Optimization
   - Python
   - Scipy
 excerpt: "應用Python Scipy進行函數最小化求解。<br/>"

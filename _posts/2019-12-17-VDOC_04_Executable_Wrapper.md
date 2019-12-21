@@ -9,6 +9,7 @@ tags:
   - VisualDOC
   - VDOC
   - Optimization
+  - Python
 excerpt: "應用VisualDOC內建Executable Wrapper連接本機Python環境，進行函數最小化求解<br/>"
 ---
 
@@ -110,7 +111,7 @@ g = x**<span class="hljs-number">2</span> + y**<span class="hljs-number">2</span
 <li>設定<code>y</code>的<code>Lower Bound</code>為<code>-2</code>及<code>Upper Bound</code>為<code>4</code>。</li>
 <li>勾選<code>f</code>為<code>Objective</code>、不勾選其為<code>Constraint</code>，並確定其<code>Goal</code>維持預設的<code>Minimize</code>。</li>
 <li>勾選<code>g</code>為<code>Constraint</code>，並設定其<code>Lower Bound</code>為<code>1.5</code>。</li>
-</ul><p><img src="/assets/img/vrand_vdoc/ch4/203_component_editor.jpg" alt="203_component_editor"></p><h3 id="35-Simulation-Monitors"><a class="anchor hidden-xs" href="#35-Simulation-Monitors" title="35-Simulation-Monitors"><span class="octicon octicon-link"></span></a>3.5 Simulation Monitors</h3><p>選擇最常用的<code>BestObjetive</code>及<code>WrostConstraint</code>來觀察。</p><p><img src="/assets/img/vrand_vdoc/ch4/401_simulation_monitors.jpg" alt="401_simulation_monitors"></p><h3 id="36-Post-Processing"><a class="anchor hidden-xs" href="#36-Post-Processing" title="36-Post-Processing"><span class="octicon octicon-link"></span></a>3.6 Post Processing</h3><p><img src="/assets/img/vrand_vdoc/ch4/501_post_processing.jpg" alt="501_post_processing"></p><p><img src="/assets/img/vrand_vdoc/ch4/502_post_processing.jpg" alt="502_post_processing"></p><p><img src="/assets/img/vrand_vdoc/ch4/503_post_processing.jpg" alt="503_post_processing"></p><table>
+</ul><p><img src="/assets/img/vrand_vdoc/ch4/203_component_editor.jpg" alt="203_component_editor"></p><p>右邊的演算法部份，維持預設。</p><p><img src="/assets/img/vrand_vdoc/ch4/204_component_editor.jpg" alt="204_component_editor"></p><h3 id="35-Simulation-Monitors"><a class="anchor hidden-xs" href="#35-Simulation-Monitors" title="35-Simulation-Monitors"><span class="octicon octicon-link"></span></a>3.5 Simulation Monitors</h3><p>選擇最常用的<code>BestObjetive</code>及<code>WrostConstraint</code>來觀察。</p><p><img src="/assets/img/vrand_vdoc/ch4/401_simulation_monitors.jpg" alt="401_simulation_monitors"></p><h3 id="36-Post-Processing"><a class="anchor hidden-xs" href="#36-Post-Processing" title="36-Post-Processing"><span class="octicon octicon-link"></span></a>3.6 Post Processing</h3><p><img src="/assets/img/vrand_vdoc/ch4/501_post_processing.jpg" alt="501_post_processing"></p><p><img src="/assets/img/vrand_vdoc/ch4/502_post_processing.jpg" alt="502_post_processing"></p><p><img src="/assets/img/vrand_vdoc/ch4/503_post_processing.jpg" alt="503_post_processing"></p><table>
 <thead>
 <tr>
 <th style="text-align:center">()內為<code>PythonEquation</code>被呼叫次數</th>
