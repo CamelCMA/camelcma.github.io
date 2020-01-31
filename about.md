@@ -26,4 +26,4 @@ sidebar_link: true
 * 2019/July/15於[Gandi](https://gandi.net)註冊。
 * 2019/Dec/17開始部屬於[Github Pages](https://pages.github.com/)。
     * 發佈`Vrand VisualDOC`系列文共7篇。
-
+* 2020/Jan/31將CaeMlAi加入Google Analytics及Google Search Console。

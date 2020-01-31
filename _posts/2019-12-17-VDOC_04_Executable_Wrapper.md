@@ -10,7 +10,7 @@ tags:
   - VDOC
   - Optimization
   - Python
-excerpt: "應用VisualDOC內建Executable Wrapper連接本機Python環境，進行函數最小化求解<br/>"
+excerpt: "應用VisualDOC內建Executable Wrapper連接本機Python環境，進行函數最小化求解。<br/>"
 ---
 
 <body>

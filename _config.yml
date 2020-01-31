@@ -47,3 +47,5 @@ defaults:
       image: true
 
 future: true
+
+google_analytics: UA-157462938-1
