@@ -29,3 +29,4 @@ sidebar_link: true
 * 2020/Jan/31開始使用[Google Analytics](https://marketingplatform.google.com/about/analytics/)及[Google Search Console](https://search.google.com/search-console/about)服務。
 * 2020/Feb/12開始使用[TinyPNG](https://tinypng.com/)對站內圖片進行壓縮。
 * 2020/Feb/12開始使用[CloudFlare CDN/SSL/TLS](https://www.cloudflare.com/)服務。
+* 2020/Feb/12更新Favicon。
