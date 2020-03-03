@@ -25,8 +25,9 @@ sidebar_link: true
 ## About CMA記事
 * 2019/July/15於[Gandi](https://gandi.net)註冊。
 * 2019/Dec/17開始部署於[Github Pages](https://pages.github.com/)。
-    * 發佈`Vrand VisualDOC`系列文共7篇。
+* 2019/Dec/17發佈[Vrand VisualDOC系列文共7篇]({% post_url 2019-12-17-VDOC_00_Introduction %})。
 * 2020/Jan/31開始使用[Google Analytics](https://marketingplatform.google.com/about/analytics/)及[Google Search Console](https://search.google.com/search-console/about)服務。
 * 2020/Feb/12開始使用[TinyPNG](https://tinypng.com/)對站內圖片進行壓縮。
 * 2020/Feb/12開始使用[CloudFlare CDN/SSL/TLS](https://www.cloudflare.com/)服務。
 * 2020/Feb/12更新Favicon。
+* 2020/Mar/03發佈[DOT_00_Introduction]({% post_url 2020-03-03-DOT_00_Introduction %})。
