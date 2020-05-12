@@ -1,6 +1,6 @@
 ---
 layout: post
-title: VDOC_00_Introduction
+title: VDOC-00 Introduction
 categories:
   - Cae
 tags:

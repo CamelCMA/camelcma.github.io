@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DOT_00_Introduction
+title: DOT-00 Introduction
 categories:
   - Cae
 tags:

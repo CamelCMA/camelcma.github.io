@@ -1,6 +1,6 @@
 ---
 layout: post
-title: VDOC_03_OptRSA_DOE
+title: VDOC-03 OptRSA DOE
 categories:
   - Cae
 tags:

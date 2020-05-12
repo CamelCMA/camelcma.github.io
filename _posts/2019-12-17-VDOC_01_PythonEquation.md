@@ -1,6 +1,6 @@
 ---
 layout: post
-title: VDOC_01_PythonEquation
+title: VDOC-01 PythonEquation
 categories:
   - Cae
 tags:

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: VDOC_05_Python_Scipy
+title: VDOC-05 Python Scipy
 categories:
   - Cae
 tags:
